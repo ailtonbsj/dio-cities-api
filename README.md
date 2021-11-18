@@ -11,6 +11,10 @@ docker ps
 
 # Show logs of container
 docker logs cities-db
+
+# Acess container
+docker exec -it cities-db /bin/bash
+# psql -U postgres cities
 ```
 
 ## Populate
@@ -36,6 +40,17 @@ psql -h localhost -p 5433 -U postgres cities
 CREATE EXTENSION cube; 
 CREATE EXTENSION earthdistance;
 ```
+
+> Note: On heroku change host, port and database to cli remote access.
+
+## Requirements
+
+* Linux
+* Git
+* Java 8
+* Docker
+* IntelliJ Community
+* Heroku CLI
 
 ## References
 
